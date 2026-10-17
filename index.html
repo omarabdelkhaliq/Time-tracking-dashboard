@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Time tracking dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="cards">
+      <div class="grid-cards">
+        <!-- كارت البروفايل -->
+        <div class="jeremy-card">
+          <div class="profile">
+            <img src="img/image-jeremy.png" alt="jeremy img" />
+            <div class="profile-info">
+              <p>Report for</p>
+              <h1>Jeremy Robson</h1>
+            </div>
+          </div>
+          <div class="date">
+            <button type="button" data-period="daily">Daily</button>
+            <button type="button" data-period="weekly" class="active">
+              Weekly
+            </button>
+            <button type="button" data-period="monthly">Monthly</button>
+          </div>
+        </div>
+        <!-- Work -->
+        <div class="work-card card" data-title="Work">
+          <div class="header">
+            <img src="img/icon-work.svg" alt="work img" />
+          </div>
+          <div class="details">
+            <div class="title">
+              <p>Work</p>
+              <img src="img/icon-ellipsis.svg" alt="more img" />
+            </div>
+            <div class="hours">
+              <h2><span class="hour">32</span>hrs</h2>
+              <p>
+                <span class="period-label">Last Week</span> -
+                <span class="last-week">36</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Play -->
+        <div class="play-card card" data-title="Play">
+          <div class="header">
+            <img src="img/icon-play.svg" alt="play img" />
+          </div>
+          <div class="details">
+            <div class="title">
+              <p>Play</p>
+              <img src="img/icon-ellipsis.svg" alt="more img" />
+            </div>
+            <div class="hours">
+              <h2><span class="hour">10</span>hrs</h2>
+              <p>
+                <span class="period-label">Last Week</span> -
+                <span class="last-week">8</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Study -->
+        <div class="study-card card" data-title="Study">
+          <div class="header">
+            <img src="img/icon-study.svg" alt="study img" />
+          </div>
+          <div class="details">
+            <div class="title">
+              <p>Study</p>
+              <img src="img/icon-ellipsis.svg" alt="more img" />
+            </div>
+            <div class="hours">
+              <h2><span class="hour">4</span>hrs</h2>
+              <p>
+                <span class="period-label">Last Week</span> -
+                <span class="last-week">7</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Exercise -->
+        <div class="exercise-card card" data-title="Exercise">
+          <div class="header">
+            <img src="img/icon-exercise.svg" alt="exercise img" />
+          </div>
+          <div class="details">
+            <div class="title">
+              <p>Exercise</p>
+              <img src="img/icon-ellipsis.svg" alt="more img" />
+            </div>
+            <div class="hours">
+              <h2><span class="hour">4</span>hrs</h2>
+              <p>
+                <span class="period-label">Last Week</span> -
+                <span class="last-week">5</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Social -->
+        <div class="social-card card" data-title="Social">
+          <div class="header">
+            <img src="img/icon-social.svg" alt="social img" />
+          </div>
+          <div class="details">
+            <div class="title">
+              <p>Social</p>
+              <img src="img/icon-ellipsis.svg" alt="more img" />
+            </div>
+            <div class="hours">
+              <h2><span class="hour">5</span>hrs</h2>
+              <p>
+                <span class="period-label">Last Week</span> -
+                <span class="last-week">10</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+        <!-- Self Care -->
+        <div class="self-card card" data-title="self care">
+          <div class="header">
+            <img src="img/icon-self-care.svg" alt="self care img" />
+          </div>
+          <div class="details">
+            <div class="title">
+              <p>Self Care</p>
+              <img src="img/icon-ellipsis.svg" alt="more img" />
+            </div>
+            <div class="hours">
+              <h2><span class="hour">2</span>hrs</h2>
+              <p>
+                <span class="period-label">Last Week</span> -
+                <span class="last-week">2</span>hrs
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

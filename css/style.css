@@ -1,0 +1,225 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(226, 43%, 10%);
+    color: white;
+    font-family: "Rubik", sans-serif;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas:
+        "jeremy work play study"
+        "jeremy exercise social self";
+    width: 100%;
+    max-width: 1050px;
+    gap: 25px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* ==================== كارت Jeremy ==================== */
+.jeremy-card {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    grid-area: jeremy;
+    display: flex;
+    flex-direction: column;
+}
+
+.jeremy-card .profile {
+    background-color: hsl(246, 80%, 60%);
+    border-radius: 15px;
+    padding: 30px;
+    flex: 1;
+}
+
+.jeremy-card .profile img {
+    width: 75px;
+    border: 3px solid white;
+    border-radius: 50%;
+}
+
+.jeremy-card .profile p {
+    color: hsl(236, 100%, 87%);
+    padding-top: 35px;
+    font-size: 14px;
+}
+
+.jeremy-card .profile h1 {
+    font-size: 36px;
+    font-weight: 300;
+    margin-top: 5px;
+    padding-bottom: 30px;
+}
+
+.jeremy-card .date {
+    padding: 25px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.jeremy-card .date button {
+    background: none;
+    border: none;
+    color: hsl(235, 45%, 61%);
+    font-family: inherit;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.jeremy-card .date button:hover,
+.jeremy-card .date button.active {
+    color: white;
+}
+
+/* ==================== الكروت الـ 6 ==================== */
+.card {
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.card .header {
+    height: 60px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: 15px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.card .header img {
+    width: 70px;
+    margin-top: -10px;
+}
+
+.card .details {
+    background-color: hsl(235, 46%, 20%);
+    border-radius: 15px;
+    padding: 25px;
+    margin-top: -20px;
+    position: relative;
+    flex: 1;
+    transition: background-color 0.2s;
+}
+
+.card .details:hover {
+    background-color: hsl(235, 45%, 30%);
+}
+
+.card .details .title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card .details .title p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.card .details .title img {
+    cursor: pointer;
+    transition: filter 0.2s ease;
+}
+
+.card .details .title img:hover {
+    filter: brightness(0) invert(1);
+}
+
+.card .details .hours h2 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.card .details .hours p {
+    color: hsl(236, 100%, 87%);
+    font-size: 14px;
+}
+
+/* ==================== أماكن وألوان كل كارت ==================== */
+.work-card { grid-area: work; }
+.work-card .header { background-color: hsl(15, 100%, 70%); }
+
+.play-card { grid-area: play; }
+.play-card .header { background-color: hsl(195, 74%, 62%); }
+
+.study-card { grid-area: study; }
+.study-card .header { background-color: hsl(348, 100%, 68%); }
+
+.exercise-card { grid-area: exercise; }
+.exercise-card .header { background-color: hsl(145, 58%, 55%); }
+
+.social-card { grid-area: social; }
+.social-card .header { background-color: hsl(264, 64%, 52%); }
+
+.self-card { grid-area: self; }
+.self-card .header { background-color: hsl(43, 84%, 65%); }
+
+/* ==================== التجاوب مع الموبايل (Responsive) ==================== */
+@media (max-width: 768px) {
+    .grid-cards {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "jeremy"
+            "work"
+            "play"
+            "study"
+            "exercise"
+            "social"
+            "self";
+    }
+
+    .jeremy-card .profile {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        padding: 25px;
+    }
+
+    .jeremy-card .profile p {
+        padding-top: 0;
+    }
+
+    .jeremy-card .profile h1 {
+        font-size: 24px;
+        padding-bottom: 0;
+    }
+
+    .jeremy-card .date {
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 20px;
+    }
+
+    .card .details .hours {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .card .details .hours h2 {
+        font-size: 32px;
+        margin-bottom: 0;
+    }
+}
